@@ -20,3 +20,18 @@
     ```sql
     select table_schema, engine, count(1) from information_schema.tables group by table_schema, engine  ;
     ```
+    
+    For Postgres after getting to the bash shell you can check the size and the version using following commands:
+    
+    ```sh
+    su - postgres
+    psql wth
+    \l+ wth
+    SELECT version();
+    ```
+    
+    You should also check if there is any extensions added:
+    
+    ```sh
+    \dx
+    ```
